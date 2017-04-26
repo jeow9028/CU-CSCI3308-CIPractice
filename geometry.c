@@ -1,4 +1,3 @@
-
 /*
  * geometry.c
  * Andy Sayler
@@ -69,15 +68,4 @@ void coord_2d_midpoint(coord_2d_t* mid, const coord_2d_t* a, const coord_2d_t* b
     mid->x = ((a->x + b->x) / 2.0 );
     mid->y = ((a->y + b->y) / 2.0 );
 
-}
-
-//http://www.mathopenref.com/coordtrianglearea.html Site used to get equation for finding area
-double coord_2d_area_triangle(const coord_2d_t *a, const coord_2d_t *b, const coord_2d_t *c){
-    double half = 2.0;
-    double area = ((a->x)*(b->y-c->y)+(b->x)*(c->y-a->y)+(c->x)*(a->y-b->y));
-    if (area < 0){
-        area = area * -1.0;
-    }
-    area = area / half;
-    return area;
 }
